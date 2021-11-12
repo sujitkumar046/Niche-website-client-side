@@ -8,27 +8,44 @@ intialAuthentication();
 const Usefirebase = () => {
 
     const [user, Setuser] = useState({});
+    const [isloading, Setisloading] = useState(true);
+    const [authError, SetauthError] = useState('')
+ 
     const auth = getAuth();
 
 
     const RegisterWithEmail = (email, password) => {
+        Setisloading(true)
 
         createUserWithEmailAndPassword(auth, email, password)
         .then((result) => {
-            // Signed in 
+  
             Setuser(result.user);
-            // ...
+            SetauthError('')
           })
+          .catch (error => {
+             SetauthError(error.message)
+          })
+          .finally (() => Setisloading(false))
+          
 
 
 
     }
 
-    const LoginWithEmail =(email, password) => {
+    const LoginWithEmail =(email, password, location, history) => {
+        Setisloading(true)
         signInWithEmailAndPassword(auth, email, password)
-        .then (result => {
-            Setuser (result.user)
+        .then (UserCredential => {
+            const destination = location?.state?.from || '/';
+            history.replace(destination)
+            SetauthError('')
         })
+        .catch (error => {
+            SetauthError(error.message)
+         })
+
+        .finally (() => Setisloading(false)) 
         
 
 
@@ -36,13 +53,15 @@ const Usefirebase = () => {
 
 
     const logOut = () => {
+        Setisloading(true)
         const auth = getAuth();
         signOut(auth).then(() => {
         // Sign-out successful.
         })
-    //     .catch((error) => {
+    //    .catch((error) => {
     //     // An error happened.
     // });
+    .finally (() => Setisloading(false)) 
 
     }
 
@@ -55,6 +74,7 @@ const Usefirebase = () => {
             else {
                 Setuser({})
             }
+            Setisloading(false)
           });
           return () => unsubscribe
           
@@ -66,9 +86,11 @@ const Usefirebase = () => {
     return {
 
         user,
+        isloading,
         RegisterWithEmail,
         LoginWithEmail, 
-        logOut
+        logOut,
+        authError
         
 
 

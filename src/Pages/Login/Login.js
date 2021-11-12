@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../Hook/UseAuth';
 import NavBar from '../../Shared/NavBar/NavBar';
 
@@ -7,7 +7,11 @@ import NavBar from '../../Shared/NavBar/NavBar';
 
 const Login = () => {
  
-    const {LoginWithEmail} = useAuth();
+    const {LoginWithEmail, user, isloading, authError} = useAuth();
+
+    
+    const location = useLocation();
+    const history = useHistory();
 
 
     const [logindata, Setlogindata] = useState({})
@@ -25,8 +29,7 @@ const Login = () => {
 
     const handleLogin = (e) => {
 
-       LoginWithEmail(logindata.email, logindata.password)
-        alert('Successfuly logged in')
+       LoginWithEmail(logindata.email, logindata.password, location, history)
         e.preventDefault();
 
 
@@ -50,10 +53,23 @@ const Login = () => {
                     <br />
                     <br />
 
-                    {/* <div className='text-danger'>
-                        <p>{error}</p>
-                        <p>{error.message}</p>
-                    </div> */}
+
+                    {
+                    user?.email &&  
+                    <p>Hello! You've logged in</p>
+
+                    } 
+
+                    {isloading &&
+                    <div className="spinner-border" role="status">
+                     <span className="visually-hidden">Loading...</span>
+                    </div>
+                    }
+
+                    {authError &&  <div className='text-danger'>
+                        <p>{authError}</p>
+                        <p>{authError.message}</p>
+                    </div> }
                     <button className='btn btn-primary' type="submit">Submit</button> <br />
                     
                     

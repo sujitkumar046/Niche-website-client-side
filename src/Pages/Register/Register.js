@@ -1,3 +1,4 @@
+import userEvent from '@testing-library/user-event';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hook/UseAuth';
@@ -14,7 +15,7 @@ import NavBar from '../../Shared/NavBar/NavBar';
 
 const Register = () => {
 
-    const {RegisterWithEmail} = useAuth();
+    const {RegisterWithEmail, user, authError} = useAuth();
 
     const [registerdata, Setregisterdata] = useState({})
 
@@ -33,7 +34,7 @@ const Register = () => {
     const handleRegister = (e) => {
 
         RegisterWithEmail(registerdata.email, registerdata.password)
-        alert('Successfuly Registered')
+        // alert('Successfuly Registered')
         e.preventDefault();
 
 
@@ -60,17 +61,23 @@ const Register = () => {
                     <input onChange={handleOnChange} type="password" name="password" placeholder='Enter password' />
                     <br />
                     <br />
+                    {
+                    user?.email &&  
+                    alert('Successfuly Registered')
+                    } 
 
-                    {/* <div className='text-danger'>
-                        <p>{error}</p>
-                        <p>{error.message}</p>
-                    </div> */}
+                    {authError &&  <div className='text-danger'>
+                        <p>{authError}</p>
+                        <p>{authError.message}</p>
+                    </div> }
                     <button className='btn btn-primary' type="submit">Submit</button> <br />
                     
                     
 
     
                 </form>
+
+              
 
                 <div className='m-2'>
                 <p> Already have an account? <Link to='/login'>Please login</Link> </p>
