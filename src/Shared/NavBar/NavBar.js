@@ -19,7 +19,7 @@ const NavBar = () => {
                                 <Link to='/explore' className="nav-link" >Explore</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" >Login</Link>
+                                <Link to='/register' className="nav-link" >Register</Link>
                             </li>
                             <li className="nav-item dropdown">
                              <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
