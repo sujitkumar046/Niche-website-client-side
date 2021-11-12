@@ -20,6 +20,7 @@ const Explore = () => {
         <NavBar></NavBar>
         
         <div className='container-fluid row'>
+            <h1>Hello Here are all the products</h1>
             
             {
                 products.map (product => 
