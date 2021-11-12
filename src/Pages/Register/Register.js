@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hook/UseAuth';
+import NavBar from '../../Shared/NavBar/NavBar';
 
 
 
@@ -32,6 +33,7 @@ const Register = () => {
     const handleRegister = (e) => {
 
         RegisterWithEmail(registerdata.email, registerdata.password)
+        alert('Successfuly Registered')
         e.preventDefault();
 
 
@@ -45,8 +47,10 @@ const Register = () => {
 
     return (
         <>
-             <div className='row col-lg-11 col-md-11 col-sm-12 container-fluid ms-3 border '>
-            <h3 className='text success'>Please login</h3>
+            <NavBar></NavBar>
+
+             <div className='row col-lg-11 col-md-11 col-sm-12 container-fluid ms-3 border my-5 '>
+            <h3 className='text success'>Please Register</h3>
             <br />
             <div>
                 <form onSubmit={handleRegister}>
@@ -69,7 +73,7 @@ const Register = () => {
                 </form>
 
                 <div className='m-2'>
-                <p> Don't have an account? <Link to='/register'>Create Account</Link> </p>
+                <p> Already have an account? <Link to='/login'>Please login</Link> </p>
                 <button className='btn btn-warning' >Google Sign in</button>
                 </div>
 

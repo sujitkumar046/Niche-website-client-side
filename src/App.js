@@ -5,6 +5,7 @@ import Homepage from './Home/Homepage/Homepage';
 import Explore from './Explore/Explore';
 import Register from './Pages/Register/Register';
 import AuthProvider from './Context/AuthProvider';
+import Login from './Pages/Login/Login';
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
         </Route>
         <Route path='/register'>
           <Register></Register>
+        </Route>
+        
+        <Route path='/login'>
+          <Login></Login>
         </Route>
         
 
