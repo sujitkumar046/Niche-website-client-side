@@ -55,6 +55,8 @@ const Register = () => {
             <br />
             <div>
                 <form onSubmit={handleRegister}>
+                    <label className='text-primary fs-4 me-2' htmlFor="text">Name:</label>
+                    <input onChange={handleOnChange} name="name"  placeholder='Enter Your Name' /> <br /> 
                     <label className='text-primary fs-4 me-2' htmlFor="email">Email:</label>
                     <input onChange={handleOnChange} type="email" name="email"  placeholder='Enter Your Email' /> <br /> 
                     <label className='text-primary fs-4 me-2' htmlFor="password">Password:</label>

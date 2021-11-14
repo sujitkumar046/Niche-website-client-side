@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const HomeProducts = () => {
 
@@ -22,8 +23,18 @@ const HomeProducts = () => {
                     <img className='mx-auto d-block' style={{height:'400px', width:"400px"}} src={product.img} class="card-img-top" alt="..."/>
                     </div>
                     <div className='card-body'>
-                    <h2 class="card-title">{product.name}</h2>
+
+                    <h3 className="card-title">{product.name}</h3>
+                    <h4 className='fw-bold text-danger'> price:$ {product.price}</h4>
+
                     <p class="card-text">{product.description}</p>
+                    <Link to={`/purchase/${product._id}`}>
+                    <button className='btn btn-warning' > Buy Now </button>
+
+                    
+                    </Link>
+
+                   
 
                     </div>
 

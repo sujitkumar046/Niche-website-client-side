@@ -1,1 +1,97 @@
-[{"id":1,"name":"NEUROLOGY","description":"We provide all sort of neurological, mental and psycological treatment","img":"https://i.ibb.co/YTFNNvM/images-1.jpg"},{"id":2,"name":"HAEMATOLOGY","description":"We have best Hametalogial department in the world! We're simply the best","img":"https://i.ibb.co/Vt5Lf9R/images-3.jpg"},{"id":3,"name":"CARDIOLOGY","description":"Cardilogist around the world are working here to provide great support!","img":"https://i.ibb.co/KrxtBHR/download.jpg"},{"id":4,"name":"MRI","description":"High standard MRI machine will give you best report within shortest period ","img":"https://i.ibb.co/HzRV9xJ/gxp3tcjs-1377055247.jpg"},{"id":5,"name":"LABORATORY","description":"We've specialized laboratory to do all type of testing. All the report are checked by expert !","img":"https://i.ibb.co/cvCWKFw/lab-medicine-842452752-402879-5-v1.jpg"},{"id":6,"name":"X-RAY DIAGNOSTIC","description":"High standard MRI machine will give you best report within shortest period  !","img":"https://i.ibb.co/c1xNn74/images-6.jpg"},{"id":6,"name":"X-RAY DIAGNOSTIC","description":"High standard MRI machine will give you best report within shortest period  !","img":"https://i.ibb.co/c1xNn74/images-6.jpg"},{"id":6,"name":"X-RAY DIAGNOSTIC","description":"High standard MRI machine will give you best report within shortest period  !","img":"https://i.ibb.co/c1xNn74/images-6.jpg"}]
+[
+    {
+   
+      "name":"De'Longhi Automatic Espresso & Coffee Machine",
+       "price":"699.95" ,
+       "description":"The professional burr grinder with 13 adjustable settings grinds fresh beans every time to ensure maximum freshness. You can also use pre-ground in the second chamber. Your choice of regular, specialty or decaf. ",
+       "img":"https://m.media-amazon.com/images/I/71fis7dVn8L._AC_UL480_FMwebp_QL65_.jpg"
+      },
+    {
+   
+      "name":"Espresso Machine With Foaming Milk Frother Wand",
+       "price":"93.49" ,
+       "description":"onsenkitchen high performance espresso machine provides the right amount of pressure to perfectly extract the delicate flavor. Advanced thermoblock fast heating system let you can enjoy making the good kind of coffee in 45 seconds. ",
+       "img":"https://m.media-amazon.com/images/I/61RlAEwRofL._AC_UL480_FMwebp_QL65_.jpg"
+      },
+    {
+   
+      "name":"Sincreative Espresso Machine & Coffee Maker",
+       "price":"599.99" ,
+       "description":"The Sincreative espresso machine with coffee bean grinder and steam wand offers the true coffee aficionado everything they need to brew the perfect coffees! Your first choice in espresso machines for home use.",
+       "img":"https://m.media-amazon.com/images/I/71yiUkoyamL._AC_UL480_FMwebp_QL65_.jpg"
+      },
+    
+    {
+   
+      "name":"Cuisinart SS-20P1 Thermal Single-Serve Brewer Coffeemaker",
+       "price":"229.95" ,
+       "description":"The Cuisinart Coffee Center features a fully automatic thermal coffeemaker on one side and a single-serve brewer on the other. K-Cup pod compatible, Includes Cuisinart’s HomeBarista Reusable Filter Cup ",
+       "img":"https://m.media-amazon.com/images/I/61yrhJMMU3L._AC_UL480_FMwebp_QL65_.jpg"
+      },
+    
+    {
+   
+      "name":"Single Serve Coffee Maker",
+       "price":"64.99" ,
+       "description":"Compatible with most of the one-cup coffee capsules/pods, and with a permanent filter, our one cup single serve coffee maker is also perfect for ground coffee, one coffee maker for all your needs. ",
+       "img":"https://m.media-amazon.com/images/I/61NwCnjleDL._AC_UL480_FMwebp_QL65_.jpg"
+      },
+    
+    {
+   
+      "name":"Jura E8 Piano Black Automatic Coffee Machine",
+       "price":"2079.00" ,
+       "description":"Prepare 16 barista quality specialties including espresso, coffee, cappuccino, flat white and latte macchiato at the touch of a button.Ultimate coffee quality thanks to JURA's exclusive Pulse Extraction Process",
+       "img":"https://m.media-amazon.com/images/I/71Ga60M1CtL._AC_UL480_FMwebp_QL65_.jpg"
+      },
+    
+    {
+   
+      "name":"Keurig K-Cafe Special Edition Single Serve K-Cup Pod Coffee",
+       "price":"199.97" ,
+       "description":"Large 60 ounce water reservoir: Allows you to brew 6 cups before having to refill, saving you time and simplifying your morning routine; Removable reservoir makes refilling easy. ",
+       "img":"https://m.media-amazon.com/images/I/71NF2frANqL._AC_UL480_FMwebp_QL65_.jpg"
+      },
+    
+    {
+   
+      "name":"Breville BES870XL Barista Express Espresso Machine",
+       "price":"670.00" ,
+       "description":"The Breville Barista Express delivers third wave specialty coffee at home using the 4 keys formula and is part of the Barista Series that offers all in one espresso machines with integrated grinder to go from beans to espresso in under one minute. ",
+       "img":"https://m.media-amazon.com/images/I/81jwrgyJDXL._AC_UL480_FMwebp_QL65_.jpg"
+      },
+    
+    {
+   
+      "name":"Mr. Coffee Espresso and Cappuccino Maker",
+       "price":"199.99" ,
+       "description":"Semi automatic 3 in 1 espresso maker, cappuccino maker, and latte maker. 15 Bar Pump System Brews Rich Tasting Espresso Coffee. One touch control panel for drink selections",
+       "img":"https://m.media-amazon.com/images/I/81r1yrd9NnL._AC_UL480_FMwebp_QL65_.jpg"
+      },
+    
+    {
+   
+      "name":"Hamilton Beach 49976 FlexBrew Trio 2-Way Single Serve Coffee Maker",
+       "price":"104.99" ,
+       "description":"Brew up to 12 cups with ground coffee on the carafe side or use dual purpose single serving to brew a pod or ground coffee on the other. The included pod holder and single-serve grounds basket easily handle both options. ",
+       "img":"https://m.media-amazon.com/images/I/61Fm6-0t5IL._AC_UL480_FMwebp_QL65_.jpg"
+      },
+    
+    {
+   
+      "name":"De'Longhi EC9355M La Specialista Prestigio Espresso Machine",
+       "price":"832.96" ,
+       "description":"Integrated burr grinder with two sensors delivers consistent grinding and optimal coffee dose.Explore single wall filter baskets for greater espresso experience.Power the machine on and immediately start grinding ",
+       "img":"https://m.media-amazon.com/images/I/81UUaXqrH7S._AC_UL480_FMwebp_QL65_.jpg"
+      },
+    
+    {
+   
+      "name":"Mcilpoog Super-automatic Espresso Coffee Machine",
+       "price":"799.99" ,
+       "description":"The touch screen display simplifies how to make your favourite coffee in 3 simple steps: Grind, Brew and Milk; Easily adjust the coffee strength, milk texture and temperature to match your taste. ",
+       "img":"https://m.media-amazon.com/images/I/81iW0oyplXS._AC_UL480_FMwebp_QL65_.jpg"
+      }
+    
+  ]
+  

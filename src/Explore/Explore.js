@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import NavBar from '../Shared/NavBar/NavBar';
 
 const Explore = () => {
@@ -6,7 +7,7 @@ const Explore = () => {
     const [products, Setproducts] = useState([])
 
     useEffect (() => {
-        fetch('/Products.json')
+        fetch('http://localhost:5000/products')
         .then (res => res.json())
         .then (data => Setproducts (data))
 
@@ -29,8 +30,14 @@ const Explore = () => {
                     <img className='mx-auto d-block' style={{height:'400px', width:"400px"}} src={product.img} class="card-img-top" alt="..."/>
                     </div>
                     <div className='card-body'>
-                    <h2 class="card-title">{product.name}</h2>
-                    <p class="card-text">{product.description}</p>
+                    <h3 className="card-title">{product.name}</h3>
+                    <h4 className='fw-bold text-danger'>Price: ${product.price}</h4>
+                    <p className="card-text">{product.description}</p>
+                    <Link to={`/purchase/${product._id}`}>
+                    <button className='btn btn-warning'>Buy Now</button>
+                    
+                    </Link>
+                    
 
                     </div>
 

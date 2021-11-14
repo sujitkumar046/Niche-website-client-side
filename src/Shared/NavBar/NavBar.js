@@ -30,8 +30,8 @@ const NavBar = () => {
                                  Dashboard
                             </Link>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><Link className="dropdown-item" >Pay</Link></li>
-                                    <li><Link className="dropdown-item" >My Orders</Link></li>
+                                    <li><Link to='/pay' className="dropdown-item" >Pay</Link></li>
+                                    <li><Link to='/myorder' className="dropdown-item" >My Orders</Link></li>
                                     <li><Link className="dropdown-item" >Review</Link></li>
                                     <li>
                                        
