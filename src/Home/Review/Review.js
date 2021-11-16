@@ -23,8 +23,25 @@ const Review = () => {
 
     return (
         <>
+        <h2 className='text-success bottom-border'>Customer Reviews</h2>
 
-        <div className='row container-fluid'>
+        <div className='row container-fluid my-5'>
+            {
+                reviews.map (review => 
+                <div className='col-md-3 col-lg-3 col-sm-12 g-4 border'>
+                    <div>
+                        <h4 className='text-primary'>{review.Name}</h4>
+                        <h5>{review.profession}</h5>
+                        <p>{review.description}</p>
+
+
+                    </div>
+
+
+
+
+                </div>)
+            }
 
             
 

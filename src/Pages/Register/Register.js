@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../Hook/UseAuth';
 import NavBar from '../../Shared/NavBar/NavBar';
 
@@ -17,9 +17,11 @@ const Register = () => {
 
     const {RegisterWithEmail, user, authError} = useAuth();
 
+    const history = useHistory()
+
     const [registerdata, Setregisterdata] = useState({})
 
-    const handleOnChange  = (e) => {
+    const handleOnBlur  = (e) => {
         const field = e.target.name;
         const value = e.target.value;
         const newRegisteredUser = {...registerdata};
@@ -33,7 +35,7 @@ const Register = () => {
 
     const handleRegister = (e) => {
 
-        RegisterWithEmail(registerdata.email, registerdata.password)
+        RegisterWithEmail(registerdata.email, registerdata.password, history)
         // alert('Successfuly Registered')
         e.preventDefault();
 
@@ -56,11 +58,11 @@ const Register = () => {
             <div>
                 <form onSubmit={handleRegister}>
                     <label className='text-primary fs-4 me-2' htmlFor="text">Name:</label>
-                    <input onChange={handleOnChange} name="name"  placeholder='Enter Your Name' /> <br /> 
+                    <input onBlur={handleOnBlur} name="name"  placeholder='Enter Your Name' /> <br /> 
                     <label className='text-primary fs-4 me-2' htmlFor="email">Email:</label>
-                    <input onChange={handleOnChange} type="email" name="email"  placeholder='Enter Your Email' /> <br /> 
+                    <input onBlur={handleOnBlur} type="email" name="email"  placeholder='Enter Your Email' /> <br /> 
                     <label className='text-primary fs-4 me-2' htmlFor="password">Password:</label>
-                    <input onChange={handleOnChange} type="password" name="password" placeholder='Enter password' />
+                    <input onBlur={handleOnBlur} type="password" name="password" placeholder='Enter password' />
                     <br />
                     <br />
                     {

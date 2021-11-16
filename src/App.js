@@ -10,6 +10,10 @@ import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Purchase from './Purchase/Purchase';
 import Myorders from './Pages/Myorders/Myorders';
 import Pay from './Pages/Pay/Pay';
+import Customerreview from './Pages/Customerreview/Customerreview';
+import Manageallorders from './Pages/Manageallorders/Manageallorders';
+import Addaproduct from './Pages/AddAproduct/Addaproduct';
+import Manageproducts from './Pages/Manageproducts/Manageproducts';
 
 function App() {
   return (
@@ -44,6 +48,18 @@ function App() {
         </Route>
         <Route path='/pay'>
           <Pay></Pay>
+        </Route>
+        <Route path='/review'>
+          <Customerreview></Customerreview>
+        </Route>
+        <Route path='/manageallorder'>
+         <Manageallorders></Manageallorders>
+        </Route>
+        <Route path='/addaproduct'>
+         <Addaproduct></Addaproduct>
+        </Route>
+        <Route path='/manageproduct'>
+         <Manageproducts></Manageproducts>
         </Route>
 
 

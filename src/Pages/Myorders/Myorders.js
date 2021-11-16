@@ -39,6 +39,12 @@ const Myorders = () => {
         }
     }
 
+    const hadleStatus = () => {
+        <button className='btn btn-success'>Approved</button>
+    }
+
+
+
 
 
     
@@ -53,6 +59,9 @@ const Myorders = () => {
                     <h4>Hello <span className='text-success'>{mysingleorder?.name} </span>  </h4>
                     <h5>Your Order: <span className='text-primary'>{mysingleorder?.product}</span> </h5>
                     {<button onClick= {() => {handleDelete(mysingleorder?._id)}} className='btn btn-danger'>Delete</button> }
+                
+
+                    <button onClick={hadleStatus} className='btn btn-danger ms-2'>Pending Order</button>
 
 
                 </div>)

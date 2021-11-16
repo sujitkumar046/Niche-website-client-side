@@ -14,7 +14,7 @@ const Usefirebase = () => {
     const auth = getAuth();
 
 
-    const RegisterWithEmail = (email, password) => {
+    const RegisterWithEmail = (email, password, history) => {
         Setisloading(true)
 
         createUserWithEmailAndPassword(auth, email, password)
@@ -22,6 +22,7 @@ const Usefirebase = () => {
   
             Setuser(result.user);
             SetauthError('')
+            history.replace('/')
           })
           .catch (error => {
              SetauthError(error.message)
