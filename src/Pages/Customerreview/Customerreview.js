@@ -51,7 +51,7 @@ const Customerreview = () => {
         <>
         <NavBar></NavBar>
         <div className='my-5'>
-        <div className='mx-auto col-md-6 cole-md-4 col-sm-12 border mb-5'>
+        <div className='mx-auto col-md-6 cole-md-4 col-sm-12 border mb-5 '>
                 <h4 className='text-center text-success'>Please fill the required field to post a review</h4>
                 <br />
             <form onSubmit={handlereview} >

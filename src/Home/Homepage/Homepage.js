@@ -1,14 +1,17 @@
 import React from 'react';
 import NavBar from '../../Shared/NavBar/NavBar';
+import Banner from '../Banner/Banner';
 import HomeProducts from '../HomeProducts/HomeProducts';
+import Percentageoff from '../Percentageoff/Percentageoff';
 import Review from '../Review/Review';
 
 const Homepage = () => {
     return (
         <>
             <NavBar></NavBar>
-            <h1>This is the homepage</h1>
+            <Banner></Banner>
             <HomeProducts></HomeProducts>
+            <Percentageoff></Percentageoff>
             <Review></Review>
             
         </>

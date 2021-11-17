@@ -1,0 +1,21 @@
+.percentage-container {
+    background-image: url("https://barista.qodeinteractive.com/elementor/wp-content/uploads/2017/01/shop-home-grid-img.jpg"),
+      linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.239));
+    height: 380px;
+    width: 80%;
+    /* background-blend-mode: overlay; */
+    /* background-repeat: repeat;
+    background-size: cover; */
+    background-position: center;
+  } 
+
+  .percent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .percent-color {
+    color: #773d04;
+
+  }

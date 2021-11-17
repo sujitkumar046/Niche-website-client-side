@@ -1,0 +1,15 @@
+.banner-container {
+    background-image: url("https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/home-1-slider-image-1.jpg"),
+      linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.239));
+    height: 480px;
+    width: 100%;
+    background-blend-mode: overlay;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+  } 
+
+  .writing {
+    font-weight: 900;
+    font-size:larger;
+  }

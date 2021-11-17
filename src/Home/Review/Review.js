@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import './Review.css'
 
 
 
@@ -23,7 +24,7 @@ const Review = () => {
 
     return (
         <>
-        <h2 className='text-success bottom-border'>Customer Reviews</h2>
+        <h2 className='review-color fs-1 fw-bold '>Customer Reviews!</h2>
 
         <div className='row container-fluid my-5'>
             {
