@@ -14,6 +14,7 @@ import Customerreview from './Pages/Customerreview/Customerreview';
 import Manageallorders from './Pages/Manageallorders/Manageallorders';
 import Addaproduct from './Pages/AddAproduct/Addaproduct';
 import Manageproducts from './Pages/Manageproducts/Manageproducts';
+import Makeadmin from './Pages/Makeadmin/Makeadmin';
 
 function App() {
   return (
@@ -60,6 +61,9 @@ function App() {
         </Route>
         <Route path='/manageproduct'>
          <Manageproducts></Manageproducts>
+        </Route>
+        <Route path='/makeadmin'>
+         <Makeadmin></Makeadmin>
         </Route>
 
 

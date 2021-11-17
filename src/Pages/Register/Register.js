@@ -35,8 +35,7 @@ const Register = () => {
 
     const handleRegister = (e) => {
 
-        RegisterWithEmail(registerdata.email, registerdata.password, history)
-        // alert('Successfuly Registered')
+        RegisterWithEmail(registerdata.email, registerdata.password, registerdata.name, history)
         e.preventDefault();
 
 
@@ -67,7 +66,7 @@ const Register = () => {
                     <br />
                     {
                     user?.email &&  
-                    alert('Successfuly Registered')
+                    <p>Hello! You've registered successfully</p>
                     } 
 
                     {authError &&  <div className='text-danger'>

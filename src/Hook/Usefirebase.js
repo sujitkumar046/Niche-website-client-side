@@ -1,5 +1,5 @@
 
-import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import intialAuthentication from "../Firebase/Firebase.init";
 
@@ -10,11 +10,12 @@ const Usefirebase = () => {
     const [user, Setuser] = useState({});
     const [isloading, Setisloading] = useState(true);
     const [authError, SetauthError] = useState('')
+    const [admin, Setadmin] = useState(false)
  
     const auth = getAuth();
 
 
-    const RegisterWithEmail = (email, password, history) => {
+    const RegisterWithEmail = (email, password, name, history) => {
         Setisloading(true)
 
         createUserWithEmailAndPassword(auth, email, password)
@@ -22,6 +23,24 @@ const Usefirebase = () => {
   
             Setuser(result.user);
             SetauthError('')
+            const newuser = {email, displayName: name};
+            Setuser(newuser);
+
+            //save user to the database
+            
+            saveUserData(email, name);
+
+
+            updateProfile(auth.currentUser, {
+                displayName: name
+              })
+              .then(() => {
+                
+              }).catch((error) => {
+                
+                
+              });
+
             history.replace('/')
           })
           .catch (error => {
@@ -53,6 +72,13 @@ const Usefirebase = () => {
     }
 
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+        .then (res=> res.json())
+        .then (data => Setadmin(data.admin))
+
+    }, [user.email])
+
     const logOut = () => {
         Setisloading(true)
         const auth = getAuth();
@@ -81,18 +107,40 @@ const Usefirebase = () => {
           
     }, [])
 
+    const saveUserData = (email, displayName) => {
+    const user = {email, displayName};
+
+    fetch ('http://localhost:5000/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+            
+          },
+        body: JSON.stringify(user)
+
+    })
+ 
+    .then ()
+    
+
+
+
+
+    }
+
 
 
 
     return {
 
         user,
+        admin,
         isloading,
         RegisterWithEmail,
         LoginWithEmail, 
         logOut,
-        authError
-        
+        authError,
+       
 
 
 

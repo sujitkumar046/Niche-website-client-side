@@ -4,7 +4,7 @@ import useAuth from '../../Hook/UseAuth';
 
 const NavBar = () => {
 
-    const {user, logOut} = useAuth();
+    const {user, admin, logOut} = useAuth();
 
     return (
         <div>
@@ -14,18 +14,33 @@ const NavBar = () => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
+                
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav ms-auto">
+                          
                             <li className="nav-item">
                              <Link to='/home' className="nav-link active" aria-current="page" >Home</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to='/explore' className="nav-link" >Explore</Link>
                             </li>
+
+                            {user?.email  ? <li className="nav-item mx-auto">
+
+                            <span className="nav-link" >Hello ! {user.displayName}</span>
+
+                            </li> :
+                            <li className="nav-item">
+                            <Link to='/register' className="nav-link" >Register</Link>
+                            </li>}
+
+                            
+
+
                            
 
                             {
-                                user?.email ? 
+                            user?.email && !admin &&
                              
                             <li className="nav-item dropdown">
                              <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,14 +59,11 @@ const NavBar = () => {
                                     </li>
                                 </ul>
                             </li>
-                            :
-                            <li className="nav-item">
-                            <Link to='/register' className="nav-link" >Register</Link>
-                            </li>
-
-
+                            
                             }
 
+                            {admin &&
+                                
                             <li className="nav-item dropdown">
                              <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                  Admin Panel
@@ -70,7 +82,9 @@ const NavBar = () => {
                                     </li>
                                 </ul>
                             </li>
-                           
+                           }
+
+                            
 
                             
 

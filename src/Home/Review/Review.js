@@ -32,7 +32,7 @@ const Review = () => {
                     <div>
                         <h4 className='text-primary'>{review.Name}</h4>
                         <h5>{review.profession}</h5>
-                        <p>{review.description}</p>
+                        <p>"{review.description}"</p>
 
 
                     </div>
