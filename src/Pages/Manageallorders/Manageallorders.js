@@ -7,7 +7,7 @@ const Manageallorders = () => {
 
 const [allorder, Setallorder] = useState([])
 const [success, Setsucces] = useState(false)
-const [status, Setstatus] = useState(false)
+
 
 
 useEffect(() => {
@@ -67,9 +67,7 @@ fetch (`https://safe-sierra-06219.herokuapp.com/orders/${id}`, {
 }
 
 
-useEffect(() => {
-    fetch('')
-}, [])
+
 
 
     return (
@@ -87,15 +85,19 @@ useEffect(() => {
             <div className='col-md-3 col-lg-3 col-sm-6 border mt-3'>
                 <h4>Hello <span className='text-success'>{singleorder?.name} </span>  </h4>
                     <h5>Your Order: <span className='text-primary'>{singleorder?.product}</span> </h5>
+                    
+                    
+
                     <button onClick={() => {handleOrders(singleorder._id)}} className='btn btn-danger m-2'>Delete</button>
 
                     
                     
                     
-                    {success ?
+                    <button onClick={() => {handleStatus(singleorder._id)}} className='btn btn-success'>Approve</button> 
 
-                    <button onClick={() => {handleStatus(singleorder._id)}} className='btn btn-success'>Shipped</button> :
-                    <button onClick={() => {handleStatus(singleorder._id)}} className='btn btn-warning'>Pending</button>}
+                  
+                     <p>Order Status: <span className='text-primary'>{singleorder?.status}</span> </p>  
+
 
                     
                      

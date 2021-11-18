@@ -36,10 +36,10 @@ const Review = () => {
                         <h5>{review.profession}</h5>
                         <p>"{review.description}"</p>
                         <Rating 
-                        initialRating={3}
+                        initialRating={review.rating}
 
-                        emptySymbol="far fa-star"
-                        fullSymbol="fas fa-star"
+                        emptySymbol="far fa-star text-warning"
+                        fullSymbol="fas fa-star text-warning"
                         
                         
                         readonly></Rating>

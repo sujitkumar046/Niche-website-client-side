@@ -17,7 +17,7 @@ const Customerreview = () => {
        const Name = nameRef.current.value;
        const profession = professionRef.current.value;
        const description = descriptionRef.current.value;
-       const rating = ratingRef.current.value
+       const rating = ratingRef.current.value;
       
 
        const newReview= {Name, profession, description, rating}
@@ -64,7 +64,7 @@ const Customerreview = () => {
 
             <textarea className='w-75' ref={descriptionRef} name="" id="" cols="30" rows="10" placeholder='write your review'></textarea> <br /><br />
 
-            <input className='w-75' ref={professionRef} type="number" placeholder='Please provide values 1-5' /><br /> <br />
+            <input className='w-75' ref={ratingRef} type="number" placeholder='Please provide values 1-5' /><br /> <br />
 
 
     
