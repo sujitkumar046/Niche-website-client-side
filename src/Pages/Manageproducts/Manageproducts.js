@@ -9,7 +9,7 @@ const Manageproducts = () => {
 const [allproducts, Setallproducts] = useState([])
 
 useEffect(() => {
-    fetch('http://localhost:5000/products')
+    fetch('https://safe-sierra-06219.herokuapp.com/products')
     .then (res=>res.json())
     .then (data => Setallproducts(data))
 }, [])
@@ -18,7 +18,7 @@ const handleProductDelete = (id) => {
 
     const proceedtoDelete = window.confirm('Be careful! After delete that product will not appear on the explore page.')
     if (proceedtoDelete) {
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(`https://safe-sierra-06219.herokuapp.com/products/${id}`, {
         method: 'DELETE'
     })
     .then (res=> res.json())

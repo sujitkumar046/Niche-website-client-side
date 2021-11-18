@@ -18,7 +18,7 @@ const Addaproduct = () => {
         const img = imgRef.current.value;
 
         const newProducts = {name, price, description, img}
-        fetch ('http://localhost:5000/products', {
+        fetch ('https://safe-sierra-06219.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

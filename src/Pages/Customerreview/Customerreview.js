@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
-import Footer from '../../Shared/Footer/Footer';
-import NavBar from '../../Shared/NavBar/NavBar';
+import Rating from 'react-rating';
 
 const Customerreview = () => {
 
@@ -20,7 +19,7 @@ const Customerreview = () => {
       
 
        const newReview= {Name, profession, description}
-       fetch ('http://localhost:5000/reviews', {
+       fetch ('https://safe-sierra-06219.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -62,6 +61,9 @@ const Customerreview = () => {
             <input className='w-75' ref={professionRef} type="text" placeholder='Your profession' /><br /> <br />
 
             <textarea className='w-75' ref={descriptionRef} name="" id="" cols="30" rows="10" placeholder='write your review'></textarea> <br /><br />
+
+
+    
            
 
             <button className='btn btn-primary' type="submit">Post Now</button>

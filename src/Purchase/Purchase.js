@@ -11,7 +11,7 @@ const Purchase = () => {
     const [productdetails, Setproductdetails] = useState({})
 
    useEffect (() => {
-       fetch (`http://localhost:5000/products/${ID}`)
+       fetch (`https://safe-sierra-06219.herokuapp.com/products/${ID}`)
        .then (res => res.json())
        .then (data => Setproductdetails(data) )
    }, [ID])
@@ -33,7 +33,7 @@ const Purchase = () => {
 
         const newOrder = {name, email, phone, product}
 
-        fetch ('http://localhost:5000/orders', {
+        fetch ('https://safe-sierra-06219.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

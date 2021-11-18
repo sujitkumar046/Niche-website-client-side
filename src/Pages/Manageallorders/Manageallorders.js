@@ -7,9 +7,11 @@ const Manageallorders = () => {
 
 const [allorder, Setallorder] = useState([])
 const [success, Setsucces] = useState(false)
+const [status, Setstatus] = useState(false)
+
 
 useEffect(() => {
-    fetch('http://localhost:5000/orders')
+    fetch('https://safe-sierra-06219.herokuapp.com/orders')
     .then(res => res.json())
     .then (data => Setallorder(data))
 }, [])
@@ -19,7 +21,7 @@ const handleOrders = (id) => {
 
     const proceed = window.confirm ('Are you sure to delete')
     if (proceed) {
-        fetch(`http://localhost:5000/orders/${id}`, 
+        fetch(`https://safe-sierra-06219.herokuapp.com/orders/${id}`, 
     {
         method: 'DELETE'
     })
@@ -39,7 +41,7 @@ const handleOrders = (id) => {
 
 const handleStatus = (id) => {
     
-fetch (`http://localhost:5000/orders/${id}`, {
+fetch (`https://safe-sierra-06219.herokuapp.com/orders/${id}`, {
     method: 'PUT',
     headers: {
         'Content-Type': 'application/json'
@@ -60,9 +62,14 @@ fetch (`http://localhost:5000/orders/${id}`, {
 
 })
 
+
     
 }
 
+
+useEffect(() => {
+    fetch('')
+}, [])
 
 
     return (

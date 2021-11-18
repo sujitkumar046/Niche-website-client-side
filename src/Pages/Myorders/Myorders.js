@@ -10,7 +10,7 @@ const Myorders = () => {
     const [myorders, Setmyorders] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://safe-sierra-06219.herokuapp.com/orders')
         .then(res=> res.json())
         .then (data => {
             const myPlacedOrder = data.filter (order => order.email === user.email )
@@ -24,7 +24,7 @@ const Myorders = () => {
 
         const proceedtoDelete = window.confirm('Want to delete')
         if (proceedtoDelete) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://safe-sierra-06219.herokuapp.com/orders/${id}`, {
             method: 'DELETE'
         })
         .then (res=> res.json())

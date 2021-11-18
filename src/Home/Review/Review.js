@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import Rating from 'react-rating';
 import './Review.css'
 
 
@@ -10,7 +11,7 @@ const Review = () => {
     const [reviews, Setreviews] = useState([])
 
     useEffect (() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://safe-sierra-06219.herokuapp.com/reviews')
         .then (res => res.json())
         .then (data => Setreviews(data))
     }, [])
@@ -34,6 +35,14 @@ const Review = () => {
                         <h4 className='text-primary'>{review.Name}</h4>
                         <h5>{review.profession}</h5>
                         <p>"{review.description}"</p>
+                        <Rating 
+                        initialRating={3}
+
+                        emptySymbol="far fa-star"
+                        fullSymbol="fas fa-star"
+                        
+                        
+                        readonly></Rating>
 
 
                     </div>

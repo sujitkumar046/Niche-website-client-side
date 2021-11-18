@@ -15,7 +15,7 @@ const Makeadmin = () => {
     const handlesubmit = (e) => {
         e.preventDefault(e)
         const user ={email}
-        fetch ('http://localhost:5000/users', {
+        fetch ('https://safe-sierra-06219.herokuapp.com/users', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
