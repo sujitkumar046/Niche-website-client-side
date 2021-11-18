@@ -1,0 +1,10 @@
+.dash-container {
+    background-image: url("https://m.media-amazon.com/images/I/71Ga60M1CtL._AC_UL320_.jpg"),
+      linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.239));
+    height: 480px;
+    width: 100%;
+    background-blend-mode: overlay;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+  } 

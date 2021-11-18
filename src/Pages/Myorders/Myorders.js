@@ -40,9 +40,7 @@ const Myorders = () => {
         }
     }
 
-    const hadleStatus = (id) => {
-        
-    }
+   
 
 
 
@@ -62,8 +60,7 @@ const Myorders = () => {
                     {<button onClick= {() => {handleDelete(mysingleorder?._id)}} className='btn btn-danger'>Delete</button> }
                 
 
-                    <button onClick={hadleStatus} className='btn btn-danger ms-2'>Pending Order</button>
-
+                    
 
                 </div>)
             }

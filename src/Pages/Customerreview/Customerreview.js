@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import Rating from 'react-rating';
+
 
 const Customerreview = () => {
 
@@ -7,6 +7,7 @@ const Customerreview = () => {
    const nameRef = useRef();
    const professionRef = useRef();
    const descriptionRef =useRef();
+   const ratingRef = useRef();
    
 
    const handlereview = (e) => {
@@ -16,9 +17,10 @@ const Customerreview = () => {
        const Name = nameRef.current.value;
        const profession = professionRef.current.value;
        const description = descriptionRef.current.value;
+       const rating = ratingRef.current.value
       
 
-       const newReview= {Name, profession, description}
+       const newReview= {Name, profession, description, rating}
        fetch ('https://safe-sierra-06219.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
@@ -61,6 +63,8 @@ const Customerreview = () => {
             <input className='w-75' ref={professionRef} type="text" placeholder='Your profession' /><br /> <br />
 
             <textarea className='w-75' ref={descriptionRef} name="" id="" cols="30" rows="10" placeholder='write your review'></textarea> <br /><br />
+
+            <input className='w-75' ref={professionRef} type="number" placeholder='Please provide values 1-5' /><br /> <br />
 
 
     

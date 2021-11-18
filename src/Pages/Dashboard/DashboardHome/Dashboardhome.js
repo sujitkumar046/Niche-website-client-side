@@ -1,9 +1,11 @@
 import React from 'react';
 
+
 const Dashboardhome = () => {
     return (
-        <div>
-            <h2>Hello this is Dashboard</h2>
+        <div className='my-5'>
+            <h2>Here is Your Dashboard</h2>
+            <p>Please Clikc on the side navigation bar for different options</p>
         </div>
     );
 };
