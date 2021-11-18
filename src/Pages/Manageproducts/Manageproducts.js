@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Footer from '../../Shared/Footer/Footer';
 import NavBar from '../../Shared/NavBar/NavBar';
 
 const Manageproducts = () => {
@@ -39,20 +40,20 @@ const handleProductDelete = (id) => {
         <>
 
 
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
 
         <div className='row container-flud'>
 
         {
             allproducts.map(singleproduct => 
-            <div className='col-md-3 col-lg-3 col-sm-6 g-4' >
+            <div className='col-md-3 col-lg-3 col-sm-6 g-4 my-5' >
                 <div>
                     <img className='img-fluid' style={{height:'200px', width:'200px'}} src={singleproduct.img} alt="" />
                 </div>
                 <div>
-                    <h4>{singleproduct.name.slice(0,20)}</h4>
-                    <h3 className='text-danger'>{singleproduct.price}</h3>
-                    <p>{singleproduct.description.slice(0,100)}</p>
+                    <h4>{singleproduct.name.slice(0,15)}</h4>
+                    <h3 className='text-danger'>${singleproduct.price}</h3>
+                    <p>{singleproduct.description.slice(0,70)}</p>
                     {<button onClick= {() => {handleProductDelete(singleproduct?._id)}} className='btn btn-danger'>Delete Product</button> }
                 </div>
 
@@ -64,6 +65,8 @@ const handleProductDelete = (id) => {
 
 
         </div>
+
+        {/* <Footer></Footer> */}
             
         </>
     );

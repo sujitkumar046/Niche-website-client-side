@@ -15,6 +15,7 @@ import Manageallorders from './Pages/Manageallorders/Manageallorders';
 import Addaproduct from './Pages/AddAproduct/Addaproduct';
 import Manageproducts from './Pages/Manageproducts/Manageproducts';
 import Makeadmin from './Pages/Makeadmin/Makeadmin';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -31,10 +32,9 @@ function App() {
         <Route path='/home'>
           <Homepage></Homepage>
         </Route>
-        
-        <PrivateRoute path='/explore'>
+        <Route path='/explore'>
           <Explore></Explore>
-        </PrivateRoute>
+        </Route>
         <PrivateRoute path='/purchase/:ID'>
           <Purchase></Purchase>
         </PrivateRoute>
@@ -65,6 +65,10 @@ function App() {
         <Route path='/makeadmin'>
          <Makeadmin></Makeadmin>
         </Route>
+        <Route path='/dashboard'>
+         <Dashboard></Dashboard>
+        </Route>
+        
 
 
 

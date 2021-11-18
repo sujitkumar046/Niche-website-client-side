@@ -2,6 +2,7 @@ import userEvent from '@testing-library/user-event';
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../Hook/UseAuth';
+import Footer from '../../Shared/Footer/Footer';
 import NavBar from '../../Shared/NavBar/NavBar';
 
 
@@ -51,17 +52,17 @@ const Register = () => {
         <>
             <NavBar></NavBar>
 
-             <div className='row col-lg-11 col-md-11 col-sm-12 container-fluid ms-3 border my-5 '>
+             <div className='row col-lg-6 col-md-6 col-sm-12 container-fluid border my-5 mx-auto '>
             <h3 className='text success'>Please Register</h3>
             <br />
             <div>
                 <form onSubmit={handleRegister}>
-                    <label className='text-primary fs-4 me-2' htmlFor="text">Name:</label>
-                    <input onBlur={handleOnBlur} name="name"  placeholder='Enter Your Name' /> <br /> 
-                    <label className='text-primary fs-4 me-2' htmlFor="email">Email:</label>
-                    <input onBlur={handleOnBlur} type="email" name="email"  placeholder='Enter Your Email' /> <br /> 
-                    <label className='text-primary fs-4 me-2' htmlFor="password">Password:</label>
-                    <input onBlur={handleOnBlur} type="password" name="password" placeholder='Enter password' />
+                    <label className='w-50 text-primary fs-4 mb-1 text-start' htmlFor="text">Name:</label> <br />
+                    <input className='w-50' onBlur={handleOnBlur} name="name"  placeholder='Enter Your Name' /> <br /> 
+                    <label className='w-50 text-primary fs-4 mb-1 text-start' htmlFor="email">Email:</label> <br />
+                    <input className='w-50' onBlur={handleOnBlur} type="email" name="email"  placeholder='Enter Your Email' /> <br /> 
+                    <label className='w-50 text-primary fs-4 mb-1 text-start' htmlFor="password">Password:</label> <br />
+                    <input className='w-50' onBlur={handleOnBlur} type="password" name="password" placeholder='Enter password' />
                     <br />
                     <br />
                     {
@@ -91,6 +92,7 @@ const Register = () => {
                     
             </div>
         </div>
+        <Footer></Footer>
         </>
     );
 };

@@ -1,11 +1,12 @@
 import React from 'react';
+import Footer from '../../Shared/Footer/Footer';
 import NavBar from '../../Shared/NavBar/NavBar';
 
 const Pay = () => {
     return (
 
         <>
-         <NavBar></NavBar>
+        
 
         <div className='row container-fluid my-5'>
 
@@ -13,6 +14,8 @@ const Pay = () => {
 
             
         </div>
+
+       
         </>
     );
 };

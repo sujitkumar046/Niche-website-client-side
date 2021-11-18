@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import useAuth from '../../Hook/UseAuth';
+import Footer from '../../Shared/Footer/Footer';
 import NavBar from '../../Shared/NavBar/NavBar';
 
 const Myorders = () => {
@@ -39,8 +40,8 @@ const Myorders = () => {
         }
     }
 
-    const hadleStatus = () => {
-        <button className='btn btn-success'>Approved</button>
+    const hadleStatus = (id) => {
+        
     }
 
 
@@ -51,7 +52,7 @@ const Myorders = () => {
 
     return (
         <>
-        <NavBar></NavBar>
+       
             <div className='row container-fluid'>
     
             {myorders.map (mysingleorder => 
@@ -67,6 +68,8 @@ const Myorders = () => {
                 </div>)
             }
         </div>
+
+       
 
             
         </>

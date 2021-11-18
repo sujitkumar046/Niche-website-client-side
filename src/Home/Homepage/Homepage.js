@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../Shared/Footer/Footer';
 import NavBar from '../../Shared/NavBar/NavBar';
 import Banner from '../Banner/Banner';
 import HomeProducts from '../HomeProducts/HomeProducts';
@@ -13,6 +14,7 @@ const Homepage = () => {
             <HomeProducts></HomeProducts>
             <Percentageoff></Percentageoff>
             <Review></Review>
+            <Footer></Footer>
             
         </>
     );

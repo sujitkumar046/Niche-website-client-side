@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from '../../Shared/Footer/Footer';
 import NavBar from '../../Shared/NavBar/NavBar';
 
 const Makeadmin = () => {
@@ -39,7 +40,7 @@ const Makeadmin = () => {
     }
     return (
         <>
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
          <div className='mx-auto container-fluid my-5'>
          <h2>Make Admin</h2>
             <form onSubmit={handlesubmit}>
@@ -65,6 +66,8 @@ const Makeadmin = () => {
                     } 
 
          </div>
+
+         {/* <Footer></Footer> */}
            
             
         </>

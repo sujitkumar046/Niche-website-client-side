@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../Hook/UseAuth';
+import Footer from '../../Shared/Footer/Footer';
 import NavBar from '../../Shared/NavBar/NavBar';
 
 
@@ -41,15 +42,17 @@ const Login = () => {
     return (
         <>
         <NavBar></NavBar>
-        <div className='row col-lg-11 col-md-11 col-sm-12 container-fluid ms-3 border my-5'>
+        <div className='container-fluid my-5 border col-lg-6 col-md-6 col-sm-12'>
             <h3 className='text success'>Please Login</h3>
             <br />
             <div>
                 <form onSubmit={handleLogin}>
-                    <label className='text-primary fs-4 me-2' htmlFor="email">Email:</label>
-                    <input onChange={handleOnChange} type="email" name="email"  placeholder='Enter Your Email' /> <br /> 
-                    <label className='text-primary fs-4 me-2' htmlFor="password">Password:</label>
-                    <input onChange={handleOnChange} type="password" name="password" placeholder='Enter password' />
+                    <label className='w-50 text-primary fs-4 mb-1 text-start' htmlFor="email">Email:</label>
+                    <br /> 
+                    <input className='w-50' onChange={handleOnChange} type="email" name="email"  placeholder='Enter Your Email' /> <br /> 
+                    <label className='w-50 text-primary fs-4 mb-1 text-start' htmlFor="password">Password:</label>
+                    <br />
+                    <input className='w-50' onChange={handleOnChange} type="password" name="password" placeholder='Enter password' />
                     <br />
                     <br />
 
@@ -86,6 +89,7 @@ const Login = () => {
                     
             </div>
         </div>
+        <Footer></Footer>
 
             
         </>

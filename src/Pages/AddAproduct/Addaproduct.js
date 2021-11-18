@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRef } from 'react';
+import Footer from '../../Shared/Footer/Footer';
 import NavBar from '../../Shared/NavBar/NavBar';
 
 const Addaproduct = () => {
@@ -42,10 +43,10 @@ const Addaproduct = () => {
 
     return (
         <>
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
         <div className='container-fluid my-5'>
            <h1> Add A Product Here!</h1> 
-            <form onSubmit={handlePost}>
+            <form className='mt-4' onSubmit={handlePost}>
             <input className='w-50' type="text" ref={nameRef} placeholder='name' /> <br /> <br />
             <input className='w-50' type="text" ref={priceRef} placeholder='price' /> <br /> <br />
 
@@ -53,7 +54,7 @@ const Addaproduct = () => {
             
     
             <input className='w-50' type="text" ref={imgRef} placeholder='img URL' /> <br /> <br />
-            <button className='btn btn-primary' type="submit">Click to Add</button>
+            <button className='btn btn-primary fw-bold' type="submit">Click to Add</button>
 
 
 
@@ -64,6 +65,8 @@ const Addaproduct = () => {
 
             
         </div>
+
+        {/* <Footer></Footer> */}
             
 
         </>
