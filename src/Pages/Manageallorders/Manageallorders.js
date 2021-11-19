@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Footer from '../../Shared/Footer/Footer';
-import NavBar from '../../Shared/NavBar/NavBar';
 
 const Manageallorders = () => {
 
 
 const [allorder, Setallorder] = useState([])
-const [success, Setsucces] = useState(false)
+const [order, Setorder] = useState({})
+
 
 
 
@@ -53,8 +52,19 @@ fetch (`https://safe-sierra-06219.herokuapp.com/orders/${id}`, {
 .then (res=> res.json())
 .then (data => {
     if(data.modifiedCount) {
-        console.log (data)
-        Setsucces(true);
+            
+        
+            fetch(`https://safe-sierra-06219.herokuapp.com/orders/${id}`)
+            .then (res=> res.json())
+            .then (data => {
+                console.log(data)
+                Setorder(data)
+                
+
+
+            } ) 
+           
+       
        
         
     }
@@ -65,6 +75,9 @@ fetch (`https://safe-sierra-06219.herokuapp.com/orders/${id}`, {
 
     
 }
+
+
+
 
 
 
@@ -96,8 +109,16 @@ fetch (`https://safe-sierra-06219.herokuapp.com/orders/${id}`, {
                     <button onClick={() => {handleStatus(singleorder._id)}} className='btn btn-success'>Approve</button> 
 
                   
-                     <p>Order Status: <span className='text-primary'>{singleorder?.status}</span> </p>  
+                    {
+                        order?.status === "approved" ?
 
+                        <p>Order Status: <span className='text-primary'>{order?.status}</span> </p>  
+                        :
+                        <p>Order Status: <span className='text-primary'>{singleorder?.status}</span> </p>  
+
+
+                    }
+                     
 
                     
                      

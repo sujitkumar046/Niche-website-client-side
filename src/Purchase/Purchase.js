@@ -22,6 +22,7 @@ const Purchase = () => {
    const emailRef = useRef();
    const phoneRef =useRef();
    const productRef = useRef();
+   const statusRef = useRef();
 
    const handleOrder = (e) => {
 
@@ -30,8 +31,9 @@ const Purchase = () => {
         const email = emailRef.current.value;
         const phone = phoneRef.current.value;
         const product = productRef.current.value;
+        const status = statusRef.current.value
 
-        const newOrder = {name, email, phone, product}
+        const newOrder = {name, email, phone, product, status}
 
         fetch ('https://safe-sierra-06219.herokuapp.com/orders', {
             method: 'POST',
@@ -77,9 +79,10 @@ const Purchase = () => {
                 <br />
             <form onSubmit={handleOrder} >
             <input className='w-75' ref={productRef} type="text" value={productdetails?.name} placeholder='name' /> <br /> <br />
-            <input className='w-75' ref={nameRef} type="text" value={user.displayName} placeholder='name' /> <br /> <br />
-            <input className='w-75' ref={emailRef} type="text" value={user.email} placeholder='description' /><br /> <br />
+            <input className='w-75' ref={nameRef} type="text" value={user?.displayName} placeholder='name' /> <br /> <br />
+            <input className='w-75' ref={emailRef} type="text" value={user?.email} placeholder='description' /><br /> <br />
             <input className='w-75' ref={phoneRef} type="text"  placeholder='Phone' required /> <br /> <br />
+            <input className='w-75' ref={statusRef} type="hidden" value={productdetails?.status} placeholder='' /> <br /> <br />
 
             <button className='btn btn-primary' type="submit">Book Now</button>
            
